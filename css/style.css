@@ -1,0 +1,53 @@
+.m-areas>div.m-area>div.m-panel.collapsed>div.m-panel-controls {
+  -webkit-transition: max-width .0s ease 0s, opacity .0s ease 0s;
+  transition: max-width .0s ease 0s, opacity .0s ease 0s;
+}
+
+.m-panel-controls>div.ol-control-tool {
+  padding: 5px !important;
+}
+
+.m-panel.g-cartografia-herramienta.opened>button {
+  color: #67b33c !important;
+  background-color: #fff !important;
+}
+
+.m-panel.g-cartografia-herramienta.collapsed .m-panel-controls {
+  height: 0px;
+  background-color: #67b33c !important;
+}
+
+.g-cartografia-herramienta .icon-target:before {
+  /*unicode emojis:  https://unicode.org/emoji/charts/full-emoji-list.html */
+  content: "\1f4d9";
+  font-size: 22px;
+  font-family: none
+}
+
+.ol-control {
+  position: relative;
+  background-color: hsla(0, 0%, 100%, .4);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.divTitulo {
+  padding: 1px 10px 1px 10px;
+  background-color: #67b33c;
+}
+
+#titleInfo {
+  color: #fff;
+  font-family: Muli, "sans-serif" !important;
+  font-weight: 700;
+}
+
+.m-left .m-panel.g-cartografia-herramienta.opened>button {
+  position: absolute;
+  right: -40px;
+}
+
+.ol-control button {
+  display: table-row;
+  width: fit-content;
+}
