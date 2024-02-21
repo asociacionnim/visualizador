@@ -6,12 +6,7 @@
 
     <!-- Estilo de la API -->
     <link type="text/css" rel="stylesheet" href="https://componentes.cnig.es/api-core/assets/css/apiign.ol.min.css">
-    <!-- Estilo backimglayer-->
-    <link href="https://componentes.cnig.es/api-core/plugins/backimglayer/backimglayer.ol.min.css" rel="stylesheet" />
-    <!-- Estilo selector de capas -->
-    <link href=" https://componentes.cnig.es/api-core/assets/css/apiign.ol.min.css" rel="stylesheet" />
-    <!-- Estilo de la leyenda -->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
 
     <!-- Ficheros javascript de la API -->
     <script type="text/javascript" src="https://componentes.cnig.es/api-core/vendor/browser-polyfill.js"></script>
@@ -23,15 +18,14 @@
     <script type="text/javascript"
         src="https://componentes.cnig.es/api-core/plugins/backimglayer/backimglayer.ol.min.js"></script>
 
+    <!-- Extensión Selector de capas (layerSwicher) -->
+    <!-- <link href="https://componentes-desarrollo.cnig.es/api-core/plugins/layerswitcher/layerswitcher.ol.min.css" rel="stylesheet" />-->
+    <script type="text/javascript"
+        src="https://componentes-desarrollo.cnig.es/api-core/plugins/layerswitcher/layerswitcher.ol.min.js"></script>
 
     <!-- Extensión Selector de capa (TOC) -->
-    <link href="https://componentes.cnig.es/api-core/plugins/toc/toc.ol.min.css" rel="stylesheet" />
-    <script type="text/javascript" src="https://componentes.cnig.es/api-core/plugins/toc/toc.ol.min.js"></script>
-
-    <!-- FullTOC -->
-    <!-- <link href="https://componentes.cnig.es/api-core/plugins/fulltoc/fulltoc.ol.min.css" rel="stylesheet" />
-    <script type="text/javascript"
-        src="https://componentes.cnig.es/api-core/plugins/fulltoc/fulltoc.ol.min.js"></script> -->
+    <!-- <link href="https://componentes.cnig.es/api-core/plugins/toc/toc.ol.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://componentes.cnig.es/api-core/plugins/toc/toc.ol.min.js"></script> -->
 
     <!-- Extensión vectores -->
     <!-- <link href="https://componentes.cnig.es/api-core/plugins/vectors/vectors.ol.min.css" rel="stylesheet" />
@@ -41,7 +35,7 @@
     <!-- Extensión compartir mapa -->
     <!-- <link href="https://componentes.cnig.es/api-core/plugins/sharemap/sharemap.ol.min.css" rel="stylesheet" />
     <script type="text/javascript"
-        src="https://componentes.cnig.es/api-core/plugins/sharemap/sharemap.ol.min.js"></script> -->
+        src="https://componentes.cnig.es/api-core/plugins/sharemap/sharemap.ol.min.js"></script>  -->
 
     <!-- Extensión locator -->
     <link href="https://componentes.cnig.es/api-core/plugins/locator/locator.ol.min.css" rel="stylesheet" />
@@ -60,7 +54,8 @@
         src="https://componentes.cnig.es/api-core/plugins/printermap/printermap.ol.min.js"></script>
 
     <!-- Extensión GetFeatureInfo -->
-    <link href="https://componentes.cnig.es/api-core/plugins/information/information.ol.min.css" rel="stylesheet" />
+    <link href="https://componentes-desarrollo.cnig.es/api-core/plugins/information/information.ol.min.css"
+        rel="stylesheet" />
     <script type="text/javascript"
         src="https://componentes.cnig.es/api-core/plugins/information/information.ol.min.js"></script>
 
@@ -76,10 +71,16 @@
 
     <!-- jQuery e importación de los objetos JS de los geojson-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./geojson/ParcelasNIM_2023.geojson.js"></script>
-    <script src="./geojson/Borrenes_2023.geojson.js"></script>
-    <script src="./geojson/Priaranza_2023.geojson.js"></script>
-    <script src="./geojson/Ponfe_2023.geojson.js"></script>
+    <!-- <script src="./geojson/ParcelasNIM_2023.geojson.js"></script> -->
+    <script src="./geojson/Borrenes_2024.geojson.js"></script>
+    <script src="./geojson/Priaranza_2024.geojson.js"></script>
+    <script src="./geojson/Ponfe_2024.geojson.js"></script>
+
+    <!-- Estilos personalizados de los plugin -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!-- Estilo personalizado del layerSwitcher -->
+    <link rel="stylesheet" type="text/css" href="./css/stylelayerswitcher.css">
 
     <style type="text/css">
         html,
@@ -88,200 +89,6 @@
             padding: 0;
             height: 100%;
             overflow: hidden;
-        }
-
-        /* Estilo paneles cerrados */
-        .m-areas>div.m-area>div.m-panel,
-        .m-areas>div.m-area>div.m-panel.collapsed>button.m-panel-btn,
-        .m-areas>div.m-area>div.m-panel.m-edition>button.m-panel-btn,
-        .m-areas>div.m-area>div.m-panel.m-geosearch>button.m-panel-btn,
-        .m-areas>div.m-area>div.m-panel.m-layerswitcher>button.m-panel-btn,
-        .m-areas>div.m-area>div.m-panel.m-printer>button.m-panel-btn,
-        .m-areas>div.m-area>div.m-panel.m-searchstreet>button.m-panel-btn,
-        .m-areas>div.m-area>div.m-panel.m-searchstreetgeosearch>button.m-panel-btn,
-        .m-areas>div.m-area>div.m-panel.m-tools>button.m-panel-btn,
-        .m-areas>div.m-area>div.m-panel>div.m-panel-controls .m-mouse-position,
-        .m-scale-container,
-        .m-wmcselector-container,
-        .ol-overviewmap.ol-collapsed,
-        .ol-zoom>button,
-        .ol-zoomslider>button.ol-zoomslider-thumb {
-            background-color: #67b33c !important;
-            opacity: 1;
-        }
-
-        /* Estilo capas base */
-        div#m-backimglayer-titulo {
-            background-color: #67b33c !important;
-            color: #fff;
-            display: block;
-            font-size: 15px;
-            height: 40px;
-            line-height: 40px;
-            padding: 0 5px;
-            text-align: center;
-            width: auto;
-        }
-
-        .m-plugin-backimglayer.opened .m-panel-btn.g-cartografia-flecha-derecha,
-        .m-plugin-backimglayer.opened .m-panel-btn.g-cartografia-flecha-izquierda {
-            background-color: #67b33c !important;
-            color: #fff !important;
-        }
-
-        .m-backimglayer .activeBackimglayerDiv {
-            border: 5px solid #67b33c !important;
-        }
-
-        /* Estilo selector de capas */
-        .m-areas div.m-plugin-toc.m-panel.opened div.title {
-            background-color: #67b33c !important;
-            color: #fff !important;
-            line-height: normal;
-            margin: 0;
-            font-family: Muli, sans-serif !important;
-            line-height: 40px;
-            text-align: center;
-            height: 39px;
-            border-bottom: 1px solid rgba(0, 0, 0, .08);
-            font-size: 15px;
-        }
-
-        .m-areas>div.m-area>div.m-plugin-toc.m-panel.opened>button.m-panel-btn {
-            background-color: #ff9900 !important;
-            color: #fff !important;
-            float: none;
-            left: -40px;
-            position: absolute;
-            z-index: 999;
-            transition: none;
-        }
-
-        .m-areas div.m-plugin-toc.m-panel.opened .m-toc-panel ul.m-toc-content {
-            padding-left: 0;
-            list-style: none;
-            margin: 0;
-            max-height: 40vh;
-            overflow-y: auto;
-        }
-
-        /* Estilo Measure */
-        div.m-panel.m-panel-measurebar.opened>button.m-panel-btn {
-            background-color: #ff9900 !important;
-            color: #fff;
-        }
-
-        .m-areas>div.m-area>div.m-panel.m-panel-measurebar.opened>div.m-panel-controls>div.m-control.activated>button {
-            color: #ff9900 !important;
-        }
-
-        /* Estilo Impresión */
-        .m-areas>div.m-area>div.m-panel.m-printermap.collapsed>button.m-panel-btn {
-            background-color: #67b33c !important;
-            color: #fff !important;
-            position: inherit;
-            right: 0;
-            box-shadow: none;
-        }
-
-        .m-printermap-container>div.title {
-            background-color: #67b33c;
-            border-bottom: 1px solid rgba(0, 0, 0, .08);
-            color: #fff !important;
-            font-size: 15px;
-            height: 39px;
-            line-height: 40px;
-            text-align: center;
-        }
-
-        .m-areas>div.m-area>div.m-panel.m-printermap>button.m-panel-btn {
-            background-color: #ff9900 !important;
-            position: absolute;
-            left: auto;
-            color: #fff !important;
-            z-index: 999999;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 -1px 0 rgba(0, 0, 0, .02);
-        }
-
-        /* Estilo InfoCoordinates */
-        .m-infocoordinates-title>p {
-            margin: 0;
-            text-align: center;
-            color: #fff;
-            font-weight: 700;
-            background-color: #67b33c;
-        }
-
-        .m-plugin-infocoordinates .m-infocoordinates-help a {
-            color: #67b33c !important;
-            font-size: 20px;
-        }
-
-        .m-panel.m-plugin-infocoordinates.opened>button {
-            color: #fff !important;
-            background-color: #ff9900 !important;
-        }
-
-        /* Estilo GetFeatureInfo */
-        .m-control.m-container.m-information-container button {
-            color: #fff;
-            background-color: #67b33c !important;
-            opacity: 1;
-            border-radius: 40px;
-            border: 2px solid #fff;
-        }
-
-        .m-areas>div.m-area>div.m-panel>div.m-panel-controls>.m-control.m-container.m-information-container.activated>button {
-            background-color: #dff8d1 !important;
-            color: #364b5f !important;
-        }
-
-        /* Estilo locator */
-        #m-locator-ignsearch.locator-icon-ignsearch.activated,
-        #m-locator-infocatastro.locator-icon-catastro.activated,
-        #m-locator-xylocator.locator-icon-posicion3.activated {
-            color: #ff9900 !important;
-        }
-
-        #div-contenedor-locator>#m-ignsearch-panel>#m-ignsearchlocator-clean-button {
-            background-color: #67b33c;
-            border: none;
-            color: #fff;
-            border-radius: 2px;
-            padding: 7px 10px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        #div-contenedor-locator>#m-infocatastro-panel #m-infocatastro-refCatastral,
-        #div-contenedor-locator>#m-infocatastro-panel .button>#m-infocatastro-catastro-limpiar,
-        #div-contenedor-locator>#m-infocatastro-panel .button>#m-infocatastro-consulRef,
-        #div-contenedor-locator>#m-infocatastro-panel .button>#m-infocatastro-parcela-limpiar,
-        #div-contenedor-locator>#m-infocatastro-panel .button>#m-infocatastro-searchParams {
-            background-color: #67b33c;
-            border: none;
-            color: #fff;
-            border-radius: 2px;
-            padding: 7px 10px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        #div-contenedor-locator>#m-xylocator-panel>div.m-xylocator-datas>.button>#m-xylocator-loc {
-            background-color: #67b33c;
-            border: none;
-            color: #fff;
-            border-radius: 2px;
-            padding: 7px 10px;
-        }
-
-        #div-contenedor-locator>#m-xylocator-panel>div.m-xylocator-datas>.button>#m-xylocator-limpiar {
-            background-color: #67b33c;
-            border: none;
-            color: #fff;
-            margin-left: 10px;
-            border-radius: 2px;
-            padding: 7px 10px;
         }
     </style>
 
@@ -301,7 +108,7 @@
         M.proxy(false) // Necesario para ejecutar el visualizador en local.
         const mapajs = M.map({
             container: 'mapjs_div',
-            //controls: ['backgroundlayers'],
+            controls: ['panzoom', 'scale*true', 'scaleline'],
             zoom: zoom_p,
             maxZoom: 20,
             minZoom: 4,
@@ -321,6 +128,19 @@
             columnsNumber: 4,
             layerVisibility: true,
             layerOpts: [
+                {
+                    id: 'imagen',
+                    title: 'Imagen',
+                    preview: 'https://tms-pnoa-ma.idee.es/1.0.0/pnoa-ma/14/7884/10332.jpeg',
+                    layers: [new M.layer.TMS({
+                        url: 'https://tms-pnoa-ma.idee.es/1.0.0/pnoa-ma/{z}/{x}/{-y}.jpeg',
+                        name: 'OI.OrthoimageCoverage',
+                        projection: 'EPSG:3857',
+                        visibility: true,
+                        displayInLayerSwitcher: false,
+                        isBase: true
+                    })],
+                },
                 {
                     id: 'hibrido',
                     title: 'Híbrido',
@@ -342,19 +162,6 @@
                         isBase: true
                     })
                     ],
-                },
-                {
-                    id: 'imagen',
-                    title: 'Imagen',
-                    preview: 'https://tms-pnoa-ma.idee.es/1.0.0/pnoa-ma/14/7884/10332.jpeg',
-                    layers: [new M.layer.TMS({
-                        url: 'https://tms-pnoa-ma.idee.es/1.0.0/pnoa-ma/{z}/{x}/{-y}.jpeg',
-                        name: 'OI.OrthoimageCoverage',
-                        projection: 'EPSG:3857',
-                        visibility: true,
-                        displayInLayerSwitcher: false,
-                        isBase: true
-                    })],
                 },
                 {
                     id: 'MapaRaster',
@@ -446,33 +253,46 @@
         //DEFINICIÓN DE CAPAS
 
         // Configuración de la capa vectorial GeoJSON
-        const nim2023 = new M.layer.GeoJSON({
-            name: "Parcelas NIM 2023",
-            source: ParcelasNIM_2023Object,
+        // const nim2023 = new M.layer.GeoJSON({
+        //     name: "Parcelas NIM 2023",
+        //     source: ParcelasNIM_2023Object,
+        //     extract: true,
+        // });
+        const priaranza2024 = new M.layer.GeoJSON({
+            name: "Parcelas Priaranza 2024",
+            source: Priaranza_2024Object,
             extract: true,
         });
-        const priaranza2023 = new M.layer.GeoJSON({
-            name: "Parcelas Priaranza 2023",
-            source: Priaranza_2023Object,
-            extract: true,
-        });
-        const borrenes2023 = new M.layer.GeoJSON({
-            name: "Parcelas Borrenes 2023",
-            source: Borrenes_2023Object,
+        const borrenes2024 = new M.layer.GeoJSON({
+            name: "Parcelas Borrenes 2024",
+            source: Borrenes_2024Object,
             extract: true,
         });
 
-        const ponfe2023 = new M.layer.GeoJSON({
-            name: "Parcelas Ponferrada 2023",
-            source: Ponfe_2023Object,
+        const ponfe2024 = new M.layer.GeoJSON({
+            name: "Parcelas Ponferrada 2024",
+            source: Ponfe_2024Object,
             extract: true,
         });
 
         // Configuracion de estilos capa vectorial GeoJSON
-        let estiloNim2023 = new M.style.Generic({
+        // let estiloNim2023 = new M.style.Generic({
+        //     polygon: {
+        //         fill: {
+        //             color: '#85b66f',
+        //             opacity: 1,
+        //         },
+        //         stroke: {
+        //             color: '#fff',
+        //             width: 1
+        //         }
+        //     }
+        // });
+
+        let estiloPriaranza2024 = new M.style.Generic({
             polygon: {
                 fill: {
-                    color: '#85b66f',
+                    color: '#f8a607',
                     opacity: 1,
                 },
                 stroke: {
@@ -482,10 +302,10 @@
             }
         });
 
-        let estiloPriaranza2023 = new M.style.Generic({
+        let estiloBorrenes2024 = new M.style.Generic({
             polygon: {
                 fill: {
-                    color: '#91522d',
+                    color: '#f81807',
                     opacity: 1,
                 },
                 stroke: {
@@ -495,23 +315,10 @@
             }
         });
 
-        let estiloBorrenes2023 = new M.style.Generic({
+        let estiloponfe2024 = new M.style.Generic({
             polygon: {
                 fill: {
-                    color: '#c43c39',
-                    opacity: 1,
-                },
-                stroke: {
-                    color: '#fff',
-                    width: 1
-                }
-            }
-        });
-
-        let estiloPonfe2023 = new M.style.Generic({
-            polygon: {
-                fill: {
-                    color: '#beb297',
+                    color: '#03fa60',
                     opacity: 1,
                 },
                 stroke: {
@@ -580,14 +387,14 @@
         });
 
         // Asignamos estilo a las capas vectoriales 
-        ponfe2023.setStyle(estiloPonfe2023);
-        ponfe2023.setZIndex(106);
-        borrenes2023.setStyle(estiloBorrenes2023);
-        borrenes2023.setZIndex(105);
-        priaranza2023.setStyle(estiloPriaranza2023);
-        priaranza2023.setZIndex(104);
-        nim2023.setStyle(estiloNim2023);
-        nim2023.setZIndex(103);
+        ponfe2024.setStyle(estiloponfe2024);
+        ponfe2024.setZIndex(106);
+        borrenes2024.setStyle(estiloBorrenes2024);
+        borrenes2024.setZIndex(105);
+        priaranza2024.setStyle(estiloPriaranza2024);
+        priaranza2024.setZIndex(104);
+        // nim2023.setStyle(estiloNim2023);
+        // nim2023.setZIndex(103);
         CatastroWMS.setZIndex(102);
         capaMVT_CCAA.setStyle(estilo_capaMVT_CCAA);
         capaMVT_CCAA.setZIndex(101);
@@ -598,19 +405,105 @@
         mapajs.addLayers(capaMVT_CCAA);
         mapajs.addLayers(capaMVT_Municipios);
         mapajs.addLayers(CatastroWMS);
-        mapajs.addLayers(nim2023);
-        mapajs.addLayers(priaranza2023);
-        mapajs.addLayers(borrenes2023);
-        mapajs.addLayers(ponfe2023);
+        // mapajs.addLayers(nim2023);
+        mapajs.addLayers(priaranza2024);
+        mapajs.addLayers(borrenes2024);
+        mapajs.addLayers(ponfe2024);
 
         //Selector de capas
-        const mpTOC = new M.plugin.TOC({
+        // const mpTOC = new M.plugin.TOC({
+        //     position: 'TR',
+        //     collapsible: true,
+        //     collapsed: true
+        // });
+        // mapajs.addPlugin(mpTOC);
+        // mpTOC.panel_._element.children[0].style.cssText = "background-color: #ff9900 !important;"
+
+
+        // Extensión Layer Switcher
+        const gestionCapas = new M.plugin.Layerswitcher({
+            collapsed: true,
             position: 'TR',
-            collapsible: true,
-            collapsed: true
+            modeSelectLayers: 'eyes',
+            tools: ['zoom', 'information', 'delete'],
+            isMoveLayers: true,
+            https: true,
+            http: true,
+            showCatalog: false,
+            precharged: {
+
+                groups: [
+                    {
+                        name: 'Cartografía',
+                        services: [
+                            {
+                                name: 'Catastro',
+                                type: 'WMS',
+                                url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?',
+                                white_list: ['Catastro'],
+                            },
+                            {
+                                name: 'Unidades administrativas',
+                                type: 'MVT',
+                                url: 'https://vt-unidades-administrativas.ign.es/1.0.0/uadministrativa/{z}/{x}/{y}.pbf',
+                            },
+                            {
+                                name: 'Primera edición Mapa Topográfico Nacional (MTN)',
+                                type: 'WMTS',
+                                url: 'https://www.ign.es/wmts/primera-edicion-mtn',
+                            },
+                            {
+                                name: 'Planimetrías',
+                                type: 'WMS',
+                                url: 'https://www.ign.es/wms/minutas-cartograficas?',
+                            },
+                        ],
+                    },
+                    {
+                        name: 'Inágenes',
+                        services: [
+                            {
+                                name: 'Ortofotos máxima actualidad',
+                                type: 'WMTS',
+                                url: 'https://www.ign.es/wmts/pnoa-ma?',
+                            },
+                            {
+                                name: 'Ortofotos históricas',
+                                type: 'WMS',
+                                url: 'https://www.ign.es/wms/pnoa-historico?',
+                                white_list: ['AMS_1956-1957', 'Interministerial_1973-1986', 'SIGPAC', 'PNOA2004', 'PNOA2006', 'PNOA2008', 'PNOA2010', 'PNOA2011', 'PNOA2014', 'PNOA2017', 'PNOA2020'],
+                            },
+                        ]
+                    },
+                    {
+                        name: 'Modelos digitales de elevaciones',
+                        services: [
+                            {
+                                name: 'Modelo Digital de Superficies (Sombreado superficies y consulta de elevaciones edificios y vegetación)',
+                                type: 'WMTS',
+                                url: 'https://wmts-mapa-lidar.idee.es/lidar?',
+                            },
+                            {
+                                name: 'Modelo Digital del Terreno (Sombreado terreno y consulta de altitudes)',
+                                type: 'WMTS',
+                                url: 'https://servicios.idee.es/wmts/mdt?'
+                            },
+                            {
+                                name: 'Curvas de nivel y puntos acotados',
+                                type: 'WMS',
+                                url: 'https://servicios.idee.es/wms-inspire/mdt?',
+                                white_list: ['EL.ContourLine', 'EL.SpotElevation'],
+                            },
+                        ],
+                    },
+
+                ]
+
+
+            }
         });
-        mapajs.addPlugin(mpTOC);
-        mpTOC.panel_._element.children[0].style.cssText = "background-color: #ff9900 !important;"
+        mapajs.addPlugin(gestionCapas);
+        gestionCapas.panel_._element.children[0].style.cssText = "background-color: #ff9900 !important;"
 
         //Extensión locator
         const mp = new M.plugin.Locator({
@@ -630,9 +523,20 @@
                 resultVisibility: true,
             }
         });
-
         mapajs.addPlugin(mp);
         mp.panel_._element.children[0].style.cssText = "background-color: #67b33c !important;"
+
+        //Extensión GetFeatureInfo
+        const mpinfo = new M.plugin.Information({
+            position: 'TR',
+            tooltip: 'Consultar capas',
+            format: 'html',
+            featureCount: 5,
+            buffer: 5,
+            opened: 'one',
+        });
+        mapajs.addPlugin(mpinfo);
+        mpinfo.panel_._element.style.order = 1
 
         //Extensión Measurebar
         const measure = new M.plugin.MeasureBar({
@@ -642,49 +546,7 @@
             tooltip: 'Medidas',
         });
         mapajs.addPlugin(measure);
-        measure.panel_._element.style.order = 1
-
-        // Extensión vectores
-        // const vectores = new M.plugin.Vectors({
-        //     collapsed: true,
-        //     collapsible: true,
-        //     position: 'TR',
-        // });
-        // mapajs.addPlugin(vectores);
-        // vectores.panel_._element.style.order = 3
-
-        //Extensión comparador
-        //         const comparador = new M.plugin.Comparepanel({
-        //             position: 'TR',
-        //             vertical: false,
-        //             collapsed: true,
-        //             collapsible: true,
-        //             defaultCompareMode: 'mirror',// mirror - curtain - spyeye - none
-        //             defaultCompareViz: 0,
-        //             baseLayers: [
-        //                 ["NACIONAL 1981-1986", "1986", "WMS*NACIONAL_1981-1986*https://www.ign.es/wms/pnoa-historico*NACIONAL_1981-1986"],
-        //                 ["OLISTAT", "1998", "WMS*OLISTAT*https://www.ign.es/wms/pnoa-historico*OLISTAT"],
-        //                 ["SIGPAC", "2003", "WMS*SIGPAC*https://www.ign.es/wms/pnoa-historico*SIGPAC"],
-        //                 ["PNOA 2004", "2004", "WMS*pnoa2004*https://www.ign.es/wms/pnoa-historico*pnoa2004"],
-        //                 ["PNOA 2005", "2005", "WMS*pnoa2005*https://www.ign.es/wms/pnoa-historico*pnoa2005"],
-        //                 ["PNOA 2006", "2006", "WMS*pnoa2006*https://www.ign.es/wms/pnoa-historico*pnoa2006"],
-        //                 ["PNOA 2010", "2010", "WMS*pnoa2010*https://www.ign.es/wms/pnoa-historico*pnoa2010"]
-        //             ],
-        //             urlcoberturas: 'https://projects.develmap.com/apicnig/pnoahisto/coberturas.geojson',
-        //             lyrsMirrorMinZindex: 50,
-        //             transparencyParams: {
-        //                 radius: 100,
-        //             },
-        //             lyrcompareParams: {
-        //                 staticDivision: 2,
-        //             },
-        //             mirrorpanelParams: {
-        //                 showCursors: true,
-        //                 reverseLayout: false,
-        //             }
-        //         });
-        //         mapajs.addPlugin(comparador);
-        //         measure.panel_._element.style.order = 2
+        measure.panel_._element.style.order = 2
 
         // Extensión imprimir mapa
         const imprimir = new M.plugin.PrinterMap({
@@ -710,33 +572,6 @@
         mapajs.addPlugin(infoCoordenadas);
         infoCoordenadas.panel_._element.style.order = 4
         //infoCoordenadas.panel_._element.children[0].style.cssText = "background-color: #67b33c !important;"
-
-        //Extensión GetFeatureInfo
-        const mpinfo = new M.plugin.Information({
-            position: 'TR',
-            tooltip: 'Consultar capas',
-            format: 'html',
-            featureCount: 5,
-            buffer: 5,
-            opened: 'one',
-        });
-        mapajs.addPlugin(mpinfo);
-        mpinfo.panel_._element.style.order = 5
-
-        // Extensión compartir Mapa
-        //const compartirMapa = new M.plugin.ShareMap({
-        //    baseUrl: 'https://componentes.cnig.es/api-core/', // obligatorio
-        //    position: 'TR', // TR, TL, BR, BL
-        //    urlAPI: false, // false, true
-        //    title: 'Comparte tu mapa',
-        //    btn: 'Cerrar',
-        //    tooltip: 'Ha sido copiado con éxito',
-        //    text: "Código de Iframe",
-        //    shareLayer: true, // false, true
-
-        //});
-        //mapajs.addPlugin(compartirMapa);
-        //compartirMapa.N._element.style.order = 6
 
         // Creación extensión leyenda
         var mcontrolmcontainer = document.createElement('div');
@@ -795,71 +630,64 @@
             };
         }
 
-        // Extensión FullTOC
-        //       const gestionCapas = new M.plugin.FullTOC({
-        //           collapsed: true,
-        //           position: 'TR',
-        //           https: true,
-        //           http: true,
-        //           precharged: {
-        //
-        //
-        //               services: [
-        //                   {
-        //                       name: 'Catastro',
-        //                       type: 'WMS',
-        //                       url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?',
-        //                   },
-        //                   {
-        //                       name: 'Unidades administrativas',
-        //                       type: 'WMS',
-        //                       url: 'https://www.ign.es/wms-inspire/unidades-administrativas?',
-        //                       white_list: ['AU.AdministrativeBoundary', 'AU.AdministrativeUnit'],
-        //                   },
-        //                   {
-        //                       name: 'Mapas Históricos',
-        //                       type: 'WMTS',
-        //                       url: 'https://www.ign.es/wmts/primera-edicion-mtn',
-        //                   },
-        //                   {
-        //                       name: 'Planimetrías',
-        //                       type: 'WMS',
-        //                       url: 'https://www.ign.es/wms/minutas-cartograficas?',
-        //                   },
-        //                   {
-        //                       name: 'Ortofotos máxima actualidad',
-        //                       type: 'WMTS',
-        //                       url: 'https://www.ign.es/wmts/pnoa-ma?',
-        //                   },
-        //                   {
-        //                       name: 'Ortofotos históricas',
-        //                       type: 'WMS',
-        //                       url: 'https://www.ign.es/wms/pnoa-historico?',
-        //                   },
-        //                   {
-        //                       name: 'Curvas de nivel y Modelo digital del terreno',
-        //                       type: 'WMS',
-        //                       url: 'https://servicios.idee.es/wms-inspire/mdt?',
-        //                   },
-        //
-        //                   {
-        //                       name: 'Modelo digital de superficies',
-        //                       type: 'WMTS',
-        //                       url: 'https://wmts-mapa-lidar.idee.es/lidar?',
-        //                   },
-        //                   {
-        //                       name: 'Ocupación del suelo',
-        //                       type: 'WMTS',
-        //                       url: 'https://servicios.idee.es/wmts/ocupacion-suelo?',
-        //                   },
-        //               ],
-        //           }
-        //       });
-        //
-        //
-        //
-        //       mapajs.addPlugin(gestionCapas);
-        //       gestionCapas.panel_._element.style.order = 1
+        // Extensión compartir Mapa
+        // const compartirMapa = new M.plugin.ShareMap({
+        //    baseUrl: 'https://componentes.cnig.es/api-core/', // obligatorio
+        //    position: 'BL', // TR, TL, BR, BL
+        //    urlAPI: true, // false, true
+        //    title: 'Comparte tu mapa',
+        //    btn: 'Cerrar',
+        //    tooltip: 'Ha sido copiado con éxito',
+        //    text: "Código de Iframe",
+        //    shareLayer: true, // false, true
+        // });
+        // mapajs.addPlugin(compartirMapa);
+        //compartirMapa.N._element.style.order = 6
+
+        // Extensión vectores
+        // const vectores = new M.plugin.Vectors({
+        //     collapsed: true,
+        //     collapsible: true,
+        //     position: 'TR',
+        // });
+        // mapajs.addPlugin(vectores);
+        // vectores.panel_._element.style.order = 3
+
+        //Extensión comparador
+        //         const comparador = new M.plugin.Comparepanel({
+        //             position: 'TR',
+        //             vertical: false,
+        //             collapsed: true,
+        //             collapsible: true,
+        //             defaultCompareMode: 'mirror',// mirror - curtain - spyeye - none
+        //             defaultCompareViz: 0,
+        //             baseLayers: [
+        //                 ["NACIONAL 1981-1986", "1986", "WMS*NACIONAL_1981-1986*https://www.ign.es/wms/pnoa-historico*NACIONAL_1981-1986"],
+        //                 ["OLISTAT", "1998", "WMS*OLISTAT*https://www.ign.es/wms/pnoa-historico*OLISTAT"],
+        //                 ["SIGPAC", "2003", "WMS*SIGPAC*https://www.ign.es/wms/pnoa-historico*SIGPAC"],
+        //                 ["PNOA 2004", "2004", "WMS*pnoa2004*https://www.ign.es/wms/pnoa-historico*pnoa2004"],
+        //                 ["PNOA 2005", "2005", "WMS*pnoa2005*https://www.ign.es/wms/pnoa-historico*pnoa2005"],
+        //                 ["PNOA 2006", "2006", "WMS*pnoa2006*https://www.ign.es/wms/pnoa-historico*pnoa2006"],
+        //                 ["PNOA 2010", "2010", "WMS*pnoa2010*https://www.ign.es/wms/pnoa-historico*pnoa2010"]
+        //             ],
+        //             urlcoberturas: 'https://projects.develmap.com/apicnig/pnoahisto/coberturas.geojson',
+        //             lyrsMirrorMinZindex: 50,
+        //             transparencyParams: {
+        //                 radius: 100,
+        //             },
+        //             lyrcompareParams: {
+        //                 staticDivision: 2,
+        //             },
+        //             mirrorpanelParams: {
+        //                 showCursors: true,
+        //                 reverseLayout: false,
+        //             }
+        //         });
+        //         mapajs.addPlugin(comparador);
+        //         measure.panel_._element.style.order = 2
+
+
+
     </script>
 
 </body>

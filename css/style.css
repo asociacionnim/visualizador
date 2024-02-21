@@ -1,3 +1,206 @@
+
+.m-dialog.info div.m-button>button,.m-dialog.info div.m-title {
+  background-color: #67b33c !important;
+  color: #fff
+}
+
+/* Estilo paneles cerrados */
+.m-areas>div.m-area>div.m-panel,
+.m-areas>div.m-area>div.m-panel.collapsed>button.m-panel-btn,
+.m-areas>div.m-area>div.m-panel.m-edition>button.m-panel-btn,
+.m-areas>div.m-area>div.m-panel.m-geosearch>button.m-panel-btn,
+.m-areas>div.m-area>div.m-panel.m-layerswitcher>button.m-panel-btn,
+.m-areas>div.m-area>div.m-panel.m-printer>button.m-panel-btn,
+.m-areas>div.m-area>div.m-panel.m-searchstreet>button.m-panel-btn,
+.m-areas>div.m-area>div.m-panel.m-searchstreetgeosearch>button.m-panel-btn,
+.m-areas>div.m-area>div.m-panel.m-tools>button.m-panel-btn,
+.m-areas>div.m-area>div.m-panel>div.m-panel-controls .m-mouse-position,
+.m-scale-container,
+.m-wmcselector-container,
+.ol-overviewmap.ol-collapsed,
+.ol-zoom>button,
+.ol-zoomslider>button.ol-zoomslider-thumb {
+  background-color: #67b33c !important;
+  opacity: 1;
+}
+
+/* Estilo capas base */
+div#m-backimglayer-titulo {
+  background-color: #67b33c !important;
+  color: #fff;
+  display: block;
+  font-size: 15px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 5px;
+  text-align: center;
+  width: auto;
+}
+
+.m-plugin-backimglayer.opened .m-panel-btn.g-cartografia-flecha-derecha,
+.m-plugin-backimglayer.opened .m-panel-btn.g-cartografia-flecha-izquierda {
+  background-color: #67b33c !important;
+  color: #fff !important;
+}
+
+.m-backimglayer .activeBackimglayerDiv {
+  border: 5px solid #67b33c !important;
+}
+
+
+/* Estilo selector de capas TOC*/
+/*.m-areas div.m-plugin-toc.m-panel.opened div.title {
+            background-color: #67b33c !important;
+            color: #fff !important;
+            line-height: normal;
+            margin: 0;
+            font-family: Muli, sans-serif !important;
+            line-height: 40px;
+            text-align: center;
+            height: 39px;
+            border-bottom: 1px solid rgba(0, 0, 0, .08);
+            font-size: 15px;
+        }
+
+        .m-areas>div.m-area>div.m-plugin-toc.m-panel.opened>button.m-panel-btn {
+            background-color: #ff9900 !important;
+            color: #fff !important;
+            float: none;
+            left: -40px;
+            position: absolute;
+            z-index: 999;
+            transition: none;
+        }
+
+        .m-areas div.m-plugin-toc.m-panel.opened .m-toc-panel ul.m-toc-content {
+            padding-left: 0;
+            list-style: none;
+            margin: 0;
+            max-height: 40vh;
+            overflow-y: auto;
+        }
+        */
+
+/* Estilo Measure */
+div.m-panel.m-panel-measurebar.opened>button.m-panel-btn {
+  background-color: #ff9900 !important;
+  color: #fff;
+}
+
+.m-areas>div.m-area>div.m-panel.m-panel-measurebar.opened>div.m-panel-controls>div.m-control.activated>button {
+  color: #ff9900 !important;
+}
+
+/* Estilo Impresión */
+.m-areas>div.m-area>div.m-panel.m-printermap.collapsed>button.m-panel-btn {
+  background-color: #67b33c !important;
+  color: #fff !important;
+  position: inherit;
+  right: 0;
+  box-shadow: none;
+}
+
+.m-printermap-container>div.title {
+  background-color: #67b33c;
+  border-bottom: 1px solid rgba(0, 0, 0, .08);
+  color: #fff !important;
+  font-size: 15px;
+  height: 39px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.m-areas>div.m-area>div.m-panel.m-printermap>button.m-panel-btn {
+  background-color: #ff9900 !important;
+  position: absolute;
+  left: auto;
+  color: #fff !important;
+  z-index: 999999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 -1px 0 rgba(0, 0, 0, .02);
+}
+
+/* Estilo InfoCoordinates */
+.m-infocoordinates-title>p {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  background-color: #67b33c;
+}
+
+.m-plugin-infocoordinates .m-infocoordinates-help a {
+  color: #67b33c !important;
+  font-size: 20px;
+}
+
+.m-panel.m-plugin-infocoordinates.opened>button {
+  color: #fff !important;
+  background-color: #ff9900 !important;
+}
+
+/* Estilo GetFeatureInfo */
+.m-control.m-container.m-information-container button {
+  color: #fff;
+  background-color: #67b33c !important;
+  opacity: 1;
+  border-radius: 40px;
+  border: 2px solid #fff;
+}
+
+.m-areas>div.m-area>div.m-panel>div.m-panel-controls>.m-control.m-container.m-information-container.activated>button {
+  background-color: #dff8d1 !important;
+  color: #364b5f !important;
+}
+
+/* Estilo locator */
+#m-locator-ignsearch.locator-icon-ignsearch.activated,
+#m-locator-infocatastro.locator-icon-catastro.activated,
+#m-locator-xylocator.locator-icon-posicion3.activated {
+  color: #ff9900 !important;
+}
+
+#div-contenedor-locator>#m-ignsearch-panel>#m-ignsearchlocator-clean-button {
+  background-color: #67b33c;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#div-contenedor-locator>#m-infocatastro-panel #m-infocatastro-refCatastral,
+#div-contenedor-locator>#m-infocatastro-panel .button>#m-infocatastro-catastro-limpiar,
+#div-contenedor-locator>#m-infocatastro-panel .button>#m-infocatastro-consulRef,
+#div-contenedor-locator>#m-infocatastro-panel .button>#m-infocatastro-parcela-limpiar,
+#div-contenedor-locator>#m-infocatastro-panel .button>#m-infocatastro-searchParams {
+  background-color: #67b33c;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#div-contenedor-locator>#m-xylocator-panel>div.m-xylocator-datas>.button>#m-xylocator-loc {
+  background-color: #67b33c;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+  padding: 7px 10px;
+}
+
+#div-contenedor-locator>#m-xylocator-panel>div.m-xylocator-datas>.button>#m-xylocator-limpiar {
+  background-color: #67b33c;
+  border: none;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 2px;
+  padding: 7px 10px;
+}
+
+/* Estilo de la leyenda */
 .m-areas>div.m-area>div.m-panel.collapsed>div.m-panel-controls {
   -webkit-transition: max-width .0s ease 0s, opacity .0s ease 0s;
   transition: max-width .0s ease 0s, opacity .0s ease 0s;
