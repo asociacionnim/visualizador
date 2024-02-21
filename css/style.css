@@ -1,5 +1,5 @@
-
-.m-dialog.info div.m-button>button,.m-dialog.info div.m-title {
+.m-dialog.info div.m-button>button,
+.m-dialog.info div.m-title {
   background-color: #67b33c !important;
   color: #fff
 }
@@ -24,6 +24,15 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 500px) {
+
+  .m-areas>div.m-area>div.m-panel.m-panel-measurebar
+  
+    {
+    visibility: hidden;
+  }
+}
+
 /* Estilo capas base */
 div#m-backimglayer-titulo {
   background-color: #67b33c !important;
@@ -45,6 +54,7 @@ div#m-backimglayer-titulo {
 
 .m-backimglayer .activeBackimglayerDiv {
   border: 5px solid #67b33c !important;
+
 }
 
 
