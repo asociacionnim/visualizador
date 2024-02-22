@@ -92,7 +92,6 @@
             height: 100%;
             overflow: hidden;
         }
-
     </style>
 
 </head>
@@ -111,15 +110,23 @@
         M.proxy(false) // Necesario para ejecutar el visualizador en local.
         const mapajs = M.map({
             container: 'mapjs_div',
-            controls: ['panzoom', 'scale*true', 'scaleline'],
+            controls: ['panzoom', 'scale*true', 'scaleline', 'location'],
             zoom: zoom_p,
             maxZoom: 20,
             minZoom: 4,
             center: center_p,
         });
-
         const layers_p = M.config.MAP_VIEWER_LAYERS || [];
         mapajs.addLayers(layers_p)
+
+        // Añado el control rotate en una constate para poder asignarle una posición
+        const brujula = new M.ui.Panel('brujula', {
+            "collapsible": false,
+            "className": 'm-panel m-rotate',
+            "position": M.ui.position.BR
+        });
+        brujula.addControls([new M.control.Rotate]);
+        mapajs.addPanels([brujula]);
 
 
         // Capas de fondo
@@ -334,12 +341,13 @@
         //Capa WMS catastro
         const CatastroWMS = new M.layer.WMS(
             {
-                url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?',
+                url: 'https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?',
                 name: 'Catastro',
                 legend: 'Catastro',
                 visibility: false,
                 tiled: false,
-                version: '1.1.1'
+                version: '1.1.1',
+                // useCapabilities: false
             },
             {
                 minZoom: 8
@@ -442,7 +450,7 @@
                             {
                                 name: 'Catastro',
                                 type: 'WMS',
-                                url: 'http://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?',
+                                url: 'https://ovc.catastro.meh.es/Cartografia/WMS/ServidorWMS.aspx?',
                                 white_list: ['Catastro'],
                             },
                             {
@@ -539,7 +547,7 @@
             opened: 'one',
         });
         mapajs.addPlugin(mpinfo);
-        mpinfo.panel_._element.style.order = 1
+        // mpinfo.panel_._element.style.order = 1
 
         //Extensión Measurebar
         const measure = new M.plugin.MeasureBar({
@@ -549,7 +557,7 @@
             tooltip: 'Medidas',
         });
         mapajs.addPlugin(measure);
-        measure.panel_._element.style.order = 2
+        // measure.panel_._element.style.order = 2
 
         // Extensión imprimir mapa
         const imprimir = new M.plugin.PrinterMap({
@@ -558,7 +566,7 @@
             collapsible: true,
         });
         mapajs.addPlugin(imprimir);
-        imprimir.panel_._element.style.order = 3
+        // imprimir.panel_._element.style.order = 3
         //imprimir.panel_._element.children[0].style.cssText = "background-color: #67b33c !important;"
 
         // Extensión información de coordenadas
@@ -573,8 +581,8 @@
             helpUrl: "https://www.ign.es/iberpix/help?node=CodigosEPSG",
         });
         mapajs.addPlugin(infoCoordenadas);
-        infoCoordenadas.panel_._element.style.order = 4
-        //infoCoordenadas.panel_._element.children[0].style.cssText = "background-color: #67b33c !important;"
+        // infoCoordenadas.panel_._element.style.order = 4
+        // infoCoordenadas.panel_._element.children[0].style.cssText = "background-color: #67b33c !important;"
 
         // Creación extensión leyenda
         var mcontrolmcontainer = document.createElement('div');
@@ -612,7 +620,7 @@
             "collapsible": true,
             "className": 'g-cartografia-herramienta',
             "collapsedButtonClass": 'icon-target',
-            "position": M.ui.position.BR,
+            "position": M.ui.position.BL,
         });
 
         const urlImgLeyenda = "./leyenda/leyenda.png";

@@ -24,14 +24,47 @@
   opacity: 1;
 }
 
+/* Le quito el order -98 que tiene el plugin de impresión */
+.m-areas>div.m-area>div.m-panel.m-printermap.collapsed {
+  order: 0;
+  }
+
+/* Estilo del control location y rotate*/
+.m-areas>div.m-area>div.m-panel.opened.m-location,
+.m-areas>div.m-area>div.m-panel.opened.m-rotate {
+  background-color: #67b33c !important;
+}
+
+
+
+/* Qué oculto en tamaño de móvil */
 @media screen and (max-width: 500px) {
 
-  .m-areas>div.m-area>div.m-panel.m-panel-measurebar
-  
+  .m-areas>div.m-area>div.m-panel.m-panel-measurebar,
+  /* .m-panel-controls, */
+  .m-panel.m-panzoom.opened.no-collapsible,
+  .ol-scale-line-inner,
+  .ol-scale-container,
+  .m-panel.g-cartografia-herramienta.opened,
+  /* .m-panel.m-plugin-information.opened.no-collapsible, */
+  /* .m-panel-btn.icon-impresora, */
+  .m-panel.m-printermap.collapsed,
+  /* .m-panel-btn.icon-target, */
+  .m-panel.m-plugin-infocoordinates.collapsed,
+  .m-areas>div.m-area>div.m-panel.m-map-info>div.m-panel-controls>div 
     {
-    visibility: hidden;
+    visibility: hidden !important;
   }
-}
+
+  /* Hacer visible el location y el rotate si está ocultos en las pantallas grandes */
+  /* .m-areas>div.m-area>div.m-panel.opened.m-location,
+  .m-areas>div.m-area>div.m-panel.opened.m-rotate {
+    background-color: #67b33c !important;
+    visibility:visible !important;
+  } */
+
+  } 
+
 
 /* Estilo capas base */
 div#m-backimglayer-titulo {
