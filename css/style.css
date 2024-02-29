@@ -1,3 +1,31 @@
+/* Qué oculto en tamaño de móvil */
+@media screen and (max-width: 500px) {
+
+  .m-areas>div.m-area>div.m-panel.m-panel-measurebar,
+  /* .m-panel-controls, */
+  .m-panel.m-panzoom.opened.no-collapsible,
+  .ol-scale-line-inner,
+  .ol-scale-container,
+  .m-panel.g-cartografia-herramienta.opened,
+  /* .m-panel.m-plugin-information.opened.no-collapsible, */
+  /* .m-panel-btn.icon-impresora, */
+  .m-panel.m-printermap.collapsed,
+  /* .m-panel-btn.icon-target, */
+  .m-panel.m-plugin-infocoordinates.collapsed,
+  .m-panel.m-vectors,
+  .m-areas>div.m-area>div.m-panel.m-map-info>div.m-panel-controls>div {
+    visibility: hidden !important;
+  }
+
+  /* Hacer visible el location y el rotate si están ocultos en las pantallas grandes */
+  /* .m-areas>div.m-area>div.m-panel.opened.m-location,
+  .m-areas>div.m-area>div.m-panel.opened.m-rotate {
+    background-color: #67b33c !important;
+    visibility:visible !important;
+  } */
+
+}
+
 .m-dialog.info div.m-button>button,
 .m-dialog.info div.m-title {
   background-color: #67b33c !important;
@@ -27,44 +55,13 @@
 /* Le quito el order -98 que tiene el plugin de impresión */
 .m-areas>div.m-area>div.m-panel.m-printermap.collapsed {
   order: 0;
-  }
+}
 
 /* Estilo del control location y rotate*/
 .m-areas>div.m-area>div.m-panel.opened.m-location,
 .m-areas>div.m-area>div.m-panel.opened.m-rotate {
   background-color: #67b33c !important;
 }
-
-
-
-/* Qué oculto en tamaño de móvil */
-@media screen and (max-width: 500px) {
-
-  .m-areas>div.m-area>div.m-panel.m-panel-measurebar,
-  /* .m-panel-controls, */
-  .m-panel.m-panzoom.opened.no-collapsible,
-  .ol-scale-line-inner,
-  .ol-scale-container,
-  .m-panel.g-cartografia-herramienta.opened,
-  /* .m-panel.m-plugin-information.opened.no-collapsible, */
-  /* .m-panel-btn.icon-impresora, */
-  .m-panel.m-printermap.collapsed,
-  /* .m-panel-btn.icon-target, */
-  .m-panel.m-plugin-infocoordinates.collapsed,
-  .m-areas>div.m-area>div.m-panel.m-map-info>div.m-panel-controls>div 
-    {
-    visibility: hidden !important;
-  }
-
-  /* Hacer visible el location y el rotate si está ocultos en las pantallas grandes */
-  /* .m-areas>div.m-area>div.m-panel.opened.m-location,
-  .m-areas>div.m-area>div.m-panel.opened.m-rotate {
-    background-color: #67b33c !important;
-    visibility:visible !important;
-  } */
-
-  } 
-
 
 /* Estilo capas base */
 div#m-backimglayer-titulo {
@@ -89,7 +86,6 @@ div#m-backimglayer-titulo {
   border: 5px solid #67b33c !important;
 
 }
-
 
 /* Estilo selector de capas TOC*/
 /*.m-areas div.m-plugin-toc.m-panel.opened div.title {
@@ -195,11 +191,63 @@ div.m-panel.m-panel-measurebar.opened>button.m-panel-btn {
   color: #364b5f !important;
 }
 
+/* Estilo vectors */
+.m-container.m-vectors .m-vectors-title {
+  line-height: 40px;
+  background-color: #67b33c !important;
+}
+
+div#drawingtools button,
+div#vectors-uploading button,
+div#vectors-uploading label {
+  background-color: #67b33c;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer
+}
+
+div#m-layer-change-name>button,
+div.m-panel.m-vectors>div.m-panel-controls>div.m-vectors>div#m-vector-actions>button.activeTool,
+div.m-panel.m-vectors div#downloadFormat>button {
+  background-color: #67b33c !important;
+  color: #fff !important
+}
+
+.m-panel.m-vectors.opened>button {
+  color: #fff !important;
+  background-color: #f90 !important;
+}
+
+.m-vectors #drawingtools .stroke-container .stroke-options div.active {
+  border: 3px solid #67b33c
+}
+
+.m-vectors-common-btn {
+  padding: 8px 7px;
+  background-color: #67b33c;
+  font-family: Muli, "sans-serif" !important;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #67b33c;
+  color: #fff;
+  font-weight: 700;
+  margin-right: 10px;
+  outline: none;
+  text-decoration: none
+}
+
 /* Estilo locator */
 #m-locator-ignsearch.locator-icon-ignsearch.activated,
 #m-locator-infocatastro.locator-icon-catastro.activated,
 #m-locator-xylocator.locator-icon-posicion3.activated {
   color: #ff9900 !important;
+}
+
+.m-panel.m-plugin-locator.opened.no-collapsible.m-plugin-locator-tc-withpanel {
+  top: 0px
 }
 
 #div-contenedor-locator>#m-ignsearch-panel>#m-ignsearchlocator-clean-button {
