@@ -1,5 +1,5 @@
 /* Qué oculto en tamaño de móvil */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px), (max-height: 500px) {
 
   .m-areas>div.m-area>div.m-panel.m-panel-measurebar,
   /* .m-panel-controls, */
