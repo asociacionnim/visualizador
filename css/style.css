@@ -246,9 +246,9 @@ div.m-panel.m-vectors div#downloadFormat>button {
   color: #ff9900 !important;
 }
 
-.m-panel.m-plugin-locator.opened.no-collapsible.m-plugin-locator-tc-withpanel {
+/* .m-panel.m-plugin-locator.opened.no-collapsible.m-plugin-locator-tc-withpanel {
   top: 0px
-}
+} */
 
 #div-contenedor-locator>#m-ignsearch-panel>#m-ignsearchlocator-clean-button {
   background-color: #67b33c;
